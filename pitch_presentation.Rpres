@@ -38,6 +38,12 @@ We will use the `mtcars` dataset from R. This dataset consists of data on 32 mod
 - `gear` : Number of forward gears
 - `carb` : Number of carburetors
 
+Data Preparation & Preprocessing
+========================================================
+- There is no need to load the dataset since you can call it directly by typing `mtcars` in the console.
+- Fit the PCA: `mtcars.pca <- prcomp(mtcars[,c(1:input$num_of_pca,10,11)], center = TRUE,scale. = TRUE)`. I only use numerical values features, because PCA can only work with numerical values. Therefore, I excluded `vs` and `am` from the PCA fit. There is also an additional data preprocessing by rescaling and recentering the data.
+- Now we can plot the PCA with `ggbiplot(mtcars.pca, labels=rownames(mtcars), ellipse=TRUE, groups=mtcars.country)`
+
 The Shiny Web App
 ========================================================
 It is easier to explain how and what the PCA does to the dataset by showing the Shiny Web App itself.
