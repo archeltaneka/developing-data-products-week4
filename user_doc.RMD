@@ -1,0 +1,32 @@
+---
+title: "User Documentation"
+author: "Archel"
+date: "10/20/2021"
+output:
+  pdf_document: default
+  html_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Prerequisites
+
+To get started with the app, there are several packages you need to install beforehand:
+
+1. `shiny` v1.7.1
+2. `stats` v4.0.5 (to use the `pr.comp` function to find PCA)
+3. `devtools` v2.4.2 (to install packages from github)
+4. `ggbiplot` v0.55 (to plot the PCA result)
+
+## Installation
+1. If you are using RStudio, usually both `shiny` and `stats` package have been preinstalled along with your RStudio. If not, then you can install them using the command `install.packages('shiny')` or `install.packages('stats')`
+
+2. Next, install the `devtools` package with `install.packages(devtools)`. `devtools` will allow you to install packages from external sources (e.g. Github)
+
+3. Now we can install the `ggbiplot` package: `install_github("vqv/ggibplot")`.
+
+## Usage
+1. Click "Run App" on the right hand corner.
+2. Play around with the slider and the figure on the right side will interactively plot the reduced dimension (PCA) along with the data points from `mtcars` dataset.
